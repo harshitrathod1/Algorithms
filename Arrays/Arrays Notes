@@ -30,10 +30,21 @@ B)  Pascal's Triangle and Solving nCr
     b.) nC0 = 1, nCn = 1
     c.) pascal(i,j) -> pascal(i-1,j-1) + pascal(i-1,j) = subList.add(pre.get(j-1)) + subList.add(pre.get(j))
 
-C.)  Next Permutation
+C)  Next Permutation
 
     a.) Find value from right of array such that a[i] > a[i-1], breakIndex = i - 1;
     b.) Find value i.e. justGreater than breakIndex and rightMost from (breakIndex to N)
     c.) Swap breakIndex and justGreater
     d.) reverse the array from breakIndex + 1 onwards to N
+    
+D)  Dutch National Flag Algorithm
+
+    a.) Given a pivot and array, this algorithm partitions array into three segments
+        [less than pivot elements] + pivot + [greater than pivot]
+        It does guarntee that these paritions are sorted.
+    b.) Algorithm -> to sort array of three colors or consisting of 0,1,2 only,here pivot = 1
+       -> low,mid = 0, high = N - 1;
+       -> if(arr[mid] == 0) swap(mid,low) low++; mid++;
+       -> if(arr[mid] == 1) mid++;
+       -> if(arr[mid] == 2) swap(mid,high) high--;
 
