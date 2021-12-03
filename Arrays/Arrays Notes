@@ -58,4 +58,41 @@ D)  Dutch National Flag Algorithm
     
     Follow up ROTATE MATRIX BY 90 -> Calculate the transpose and calculate reverse for every row.
     
-
+ F) Boyre Moore Voting Algorithm
+    
+    a.) If there is a majority element in array occuring more than N/2 times that can be found in O(N) time and O(1) space
+    b.) Traverse through Array while maintaing "count and var"
+    c.) Increase the count if its same as previous one and decrease if it's not
+    d.) If the element is majority then at the end we would have that element in var
+    e.) Double check by travelling in the array and checking if in real the count of var is more than N/2 times
+    
+    for val in arr:
+        if val == var:
+            count += 1
+        else:
+            count -=1
+            
+     B) Finding Elements occuring N/3 times.
+     
+        a.) Maximum two elements in array can occur more than N/3 times
+        b.) If form triplets of elements in array like (majority_element1,majority_element2,random_ele) then at last the leftovers that cannot
+        form a pair would be possible candidates for majority ones.
+        c.)[1,1,1,2,3,4,5] -> (1,2,3),(1,4,5) Leftover = [1]
+           [1,1,1,2,2,2,4] -> (1,2,4), Leftover[1,1,2,2] or [1,2]
+        
+        var1,var2,count1,count2 = 0,0,0,0
+        for val in arr:
+            if val == var1:
+                count1++;
+            elif val == var2:
+                count2++;
+            else:
+                if count1 == 0:
+                    var1 = val;
+                    count1 = 1;
+                elif count2 == 0:
+                    var2 == val
+                    count2 = 1;
+                else:
+                    //form triplets
+                    count1--; count2--;
