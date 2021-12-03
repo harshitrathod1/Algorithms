@@ -47,4 +47,15 @@ D)  Dutch National Flag Algorithm
        -> if(arr[mid] == 0) swap(mid,low) low++; mid++;
        -> if(arr[mid] == 1) mid++;
        -> if(arr[mid] == 2) swap(mid,high) high--;
+       
+ E) Transpose of a matrix :- is nothing but rotating the matrix around the diagonal.
+    b.) M * N matrix gets converted to N * M matrix
+    c.) Allocate extra new space N * M to store the transpose of matrix
+    d.) Diagonal elements remain intact and all other generic elements such as mat[i][j] goes to new location new_mat[j][i].
+    [1,2,3]      [1,4,7]  
+    [4,5,6]  ->  [2,5,8]
+    [7,8,9]      [3,6,9]
+    
+    Follow up ROTATE MATRIX BY 90 -> Calculate the transpose and calculate reverse for every row.
+    
 
