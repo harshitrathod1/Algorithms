@@ -1,6 +1,7 @@
 A) Kadane's Algorithm
 
 1. Greedy Algorithm to find maximum sum subarray.
+    Keep Taking the sum iteratively and make it zero anytime the sum becomes less than zero.
 2. Algorithm :->
     a. Take two variables
       -> max_end_here = 0
@@ -31,8 +32,10 @@ B)  Pascal's Triangle and Solving nCr
     c.) pascal(i,j) -> pascal(i-1,j-1) + pascal(i-1,j) = subList.add(pre.get(j-1)) + subList.add(pre.get(j))
 
 C)  Next Permutation
-
-    a.) Find value from right of array such that a[i] > a[i-1], breakIndex = i - 1;
+    
+    a.0) find the starting the starting point of decreasing Sequence from back of array. Ex:- [1,5,4,3,2] here 2 index is starting point of 
+    decreasing Sequence.
+    a.1) Find value from right of array such that a[i] > a[i-1], breakIndex = i - 1;
     b.) Find value i.e. justGreater than breakIndex and rightMost from (breakIndex to N)
     c.) Swap breakIndex and justGreater
     d.) reverse the array from breakIndex + 1 onwards to N
