@@ -1,0 +1,12 @@
+                ABCD
+        (A)(BCD) (AB)(CD) (ABC)(D)
+(A) | (B)(CD) (BC)(D) | (A)(B) (C)(D) | (AB)(C) (A)(CD) (D)
+
+A = [10,20,30,40,50]
+
+Dimension of a Ai matrix is A[i-1] * A[i]; 
+
+A - 10 x 20
+B - 20 x 30
+C - 30 x 40
+D - 40 x 50
