@@ -1,6 +1,5 @@
 package Arrays;
 
-import OOPS1.A;
 
 import java.util.ArrayList;
 import java.util.List;
